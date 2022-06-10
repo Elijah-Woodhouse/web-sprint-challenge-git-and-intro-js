@@ -249,14 +249,22 @@ function getArtistByIndex(arr, num) {
 Use copy to do the following:
 1. Receive the artist array as an argument from a parameter
 2. Create a new array that is a copy of the parameter array
-3. Loop over the new array and update each index of the array to equal just the artist's name
-🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
+3. Loop over the new array and update each index of the array to equal
+just the artist's name
+🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy",
+"Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function listOfNames(arr) {
+  array = arr;
+  for (let i = 0; i < array.length; i++){
+    array[i] = array[i]["name"];
+  }
+  console.log(array);
+  return array;
 }
 
+// listOfNames(artists);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
