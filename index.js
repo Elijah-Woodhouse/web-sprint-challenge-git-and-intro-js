@@ -390,9 +390,9 @@ function artistInfo(arr, str){
     if (arr[i]["name"] === str){
       bio = arr[i]["bio"];
       // console.log(bio);
-      return bio;
     }
   }
+  return bio;
 }
 
 // artistInfo(artists, "Frida Kahlo");
