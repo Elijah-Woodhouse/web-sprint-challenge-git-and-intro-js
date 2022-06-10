@@ -270,22 +270,36 @@ function listOfNames(arr) {
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use removeArtist to do the following:
 1. Receive the artist array as an argument passed from the FIRST parameter
-2. Receive a number, which is the desired index in the array, as an argument passed from the SECOND parameter
+2. Receive a number, which is the desired index in the array, as an argument
+ passed from the SECOND parameter
 3. Create a new array that is a copy of the parameter array
 4. Remove an artist from the copied array at the desired index
 5. Return the resulting copied array
-🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
+🌟 EXAMPLE: if removeArtist is invoked with the artists array and the
+number 0, it will return the resulting array with Amedeo Modigliani
+removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(arr, num) {
+  array = arr;
+  delete array[num];
+  if (!array[num]){
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+  return array;
 }
+
+// removeArtist(artists, 8);
 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use addArtist to do the following:
 1. Receive the the artist array as an argument passed from the FIRST parameter
-2. Recieve a string (name), a string (years), a string (genre), a string (nationality), and a string (bio) as arguments passed from the SECOND, THIRD, FOURTH, FIFTH, and SIXTH parameters, repsectively.
+2. Recieve a string (name), a string (years), a string (genre),
+a string (nationality), and a string (bio) as arguments passed from the
+SECOND, THIRD, FOURTH, FIFTH, and SIXTH parameters, repsectively.
 3. Create an object with the following format:
   {
     name: Your Name Here,
@@ -297,22 +311,38 @@ Use addArtist to do the following:
 4. Return the array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(arr, name, years, genre, nationality, bio) {
+  const obj = {
+    name: name,
+    years: years,
+    genre: genre,
+    nationality: nationality,
+    bio: bio,
+  }
+  arr.push(obj);
+  // console.log(array.at(-1));
+
 }
+
+// addArtist(artists, "Elijah", 27, "software engineer", "American", "I like cheese and may all beings be happy and peaceful in this lifetime and find happiness and peace wherever they look at are.");
 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following:
 1. Receive the artist array as an argument passed from a parameter
-2. Return an array with names of artists in the received array who painted more than 100 paintings.
+2. Return an array with names of artists in the received array who
+painted more than 100 paintings.
 
-🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
+🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani",
+"Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(arr) {
+  emptyArray = [];
+  for (let i = 0; i < arr.length; i++){
+    
+  }
 }
 
 
