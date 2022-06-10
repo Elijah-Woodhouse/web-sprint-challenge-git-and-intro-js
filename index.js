@@ -239,7 +239,7 @@ number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(arr, num) {
   string = `the artist at index ${arr[num]["id"]} is ${arr[num]["name"]}`
-  console.log(string);
+  // console.log(string);
   return string;
 }
 
@@ -260,7 +260,7 @@ function listOfNames(arr) {
   for (let i = 0; i < array.length; i++){
     array[i] = array[i]["name"];
   }
-  console.log(array);
+  // console.log(array);
   return array;
 }
 
@@ -282,11 +282,11 @@ removed from our dataset. */
 function removeArtist(arr, num) {
   array = arr;
   delete array[num];
-  if (!array[num]){
-    console.log(true);
-  } else {
-    console.log(false);
-  }
+  // if (!array[num]){
+  //   console.log(true);
+  // } else {
+  //   console.log(false);
+  // }
   return array;
 }
 
@@ -309,7 +309,12 @@ SECOND, THIRD, FOURTH, FIFTH, and SIXTH parameters, repsectively.
     bio: Add 1-2 sentences (or use lorem ipsum)
   }
 4. Return the array
-🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
+🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022',
+'Full Stack Development', 'African American',
+'I have a background in customer service at Big Retail Chain.
+I am attending BloomTech to become a Frontend Developer.')
+should return the artists array with the above object
+added to the end of the array. */
 
 function addArtist(arr, name, years, genre, nationality, bio) {
   const obj = {
@@ -320,6 +325,7 @@ function addArtist(arr, name, years, genre, nationality, bio) {
     bio: bio,
   }
   arr.push(obj);
+  return arr;
   // console.log(array.at(-1));
 
 }
@@ -346,6 +352,7 @@ function lotsOfArt(arr) {
     }
   }
   // console.log(emptyArray);
+  return emptyArray;
 }
 
 // lotsOfArt(artists);
@@ -396,16 +403,36 @@ Use artistByCountry to do the following:
 1. Receive the artist array as an argument passed from the FIRST parameter
 2. Receive a string (nationality) as an argument passed from the SECOND parameter
 3. Return an array of artist names who are ONLY of that nationality.
-⚠ NOTE: Artists who have more than one nationality should not be included in this new array.
+⚠ NOTE: Artists who have more than one nationality should not be included in
+this new array.
 
-🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
+🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return:
+[ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(arr, str){
+  emptyArray = [];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i]["nationality"] === str){
+      emptyArray.push(arr[i]["name"]);
+    } else if (arr[i]["nationality"].split(',').length > 1){
+
+    }
+  }
+  // console.log(emptyArray);
+  return emptyArray;
 }
 
+// artistByCountry(artists, "Spanish");
 
+
+// function nationalities(arr){
+//   for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]["nationality"]);
+//   }
+// }
+//
+// nationalities(artists);
 
 /* ***** END OF TASKS ***** */
 
