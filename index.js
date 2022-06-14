@@ -260,11 +260,11 @@ function listOfNames(arr) {
   for (let i = 0; i < array.length; i++){
     array[i] = array[i]["name"];
   }
-  // console.log(array);
+  console.log(array);
   return array;
 }
 
-// listOfNames(artists);
+listOfNames(artists);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -281,16 +281,11 @@ removed from our dataset. */
 
 function removeArtist(arr, num) {
   const array = arr;
-  delete array[num];
-  // if (!array[num]){
-  //   console.log(true);
-  // } else {
-  //   console.log(false);
-  // }
+  array.splice(num, 1);
   return array;
 }
 
-// removeArtist(artists, 8);
+removeArtist(artists, 0);
 
 
 
