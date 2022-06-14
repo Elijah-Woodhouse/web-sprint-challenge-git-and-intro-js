@@ -437,7 +437,6 @@ function artistByCountry(arr, str){
 /* ***** END OF TASKS ***** */
 
 
-
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
 function foo() {
   console.log('its working');
