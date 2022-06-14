@@ -238,7 +238,7 @@ NOT PASS THE TEST! ❗❗
 number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(arr, num) {
-  string = `the artist at index ${arr[num]["id"]} is ${arr[num]["name"]}`
+  var string = `the artist at index ${arr[num]["id"]} is ${arr[num]["name"]}`
   // console.log(string);
   return string;
 }
@@ -256,7 +256,7 @@ just the artist's name
 */
 
 function listOfNames(arr) {
-  array = arr;
+  const array = arr;
   for (let i = 0; i < array.length; i++){
     array[i] = array[i]["name"];
   }
@@ -280,7 +280,7 @@ number 0, it will return the resulting array with Amedeo Modigliani
 removed from our dataset. */
 
 function removeArtist(arr, num) {
-  array = arr;
+  const array = arr;
   delete array[num];
   // if (!array[num]){
   //   console.log(true);
@@ -345,7 +345,7 @@ painted more than 100 paintings.
 */
 
 function lotsOfArt(arr) {
-  emptyArray = [];
+  const emptyArray = [];
   for (let i = 0; i < arr.length; i++){
     if (arr[i]["paintings"] > 100){
       emptyArray.push(arr[i]["name"]);
@@ -411,7 +411,7 @@ this new array.
 */
 
 function artistByCountry(arr, str){
-  emptyArray = [];
+  const emptyArray = [];
   for (let i = 0; i < arr.length; i++){
     if (arr[i]["nationality"] === str){
       emptyArray.push(arr[i]["name"]);
